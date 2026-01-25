@@ -2,10 +2,28 @@
   "name": "jspsych-eyelink",
   "version": "0.1.0",
   "description": "A jsPsych module for interfacing with SR Research Eyelink eye trackers",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./extension-eyelink": {
+      "types": "./dist/extension-eyelink.d.ts",
+      "import": "./dist/extension-eyelink.js"
+    },
+    "./plugin-eyelink-display": {
+      "types": "./dist/plugin-eyelink-display.d.ts",
+      "import": "./dist/plugin-eyelink-display.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dsuplica/jspsych-eyelink.git"
